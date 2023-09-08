@@ -13,7 +13,7 @@ int main(void)
 	do {
 		putchar(a);
 		a--;
-	} while (a > 97);
+	} while (a > 96);
 	putchar('\n');
 	return (0);
 }
