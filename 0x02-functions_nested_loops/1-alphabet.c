@@ -1,20 +1,15 @@
-#include <stdio.h>
+#include "main.h"
 /**
- * main - Entry point
- * 
- * Description: 'the program's description'
- * @parameter: describe the parameter
- * 
- * Return: Always 0 (Success)
+ * print_alphabet - prints alphabet
  */
 void print_alphabet(void)
 {
-	int a = 97;
+	char a = 'a';
 
-	while (a <= 122)
+	while (a <= 'z')
 	{
-		putchar(a);
+		_putchar(a);
 		a++;
 	}
-	return;
+	_putchar('\n');
 }
