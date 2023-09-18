@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-  *3-puts.c - prints a string
+  *_puts - prints a string
   *@str: input string
   */
 void _puts(char *str)
