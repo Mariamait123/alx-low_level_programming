@@ -29,42 +29,43 @@ void print_all(const char * const format, ...)
   */
 void print(int i, char *c, const char * const format, va_list a)
 {
-while (format[i] != '\0')
-{
-	switch (format[i])
+	while (format[i] != '\0')
 	{
-		case 'c':
-			{
-				printf("%c", va_arg(a, int));
-				break;
-			}
-		case 'i':
-			{
-				printf("%i", va_arg(a, int));
-				break;
-			}
-		case 'f':
-			{
-				printf("%f", va_arg(a, double));
-				break;
-			}
-		case 's':
+		switch (format[i])
 		{
-			c = va_arg(a, char *);
-			if (c == NULL)
-			c = "(nil)";
-			printf("%s", c);
-			break;
+			case 'c':
+				{
+					printf("%c", va_arg(a, int));
+					break;
+				}
+			case 'i':
+				{
+					printf("%i", va_arg(a, int));
+					break;
+				}
+			case 'f':
+				{
+					printf("%f", va_arg(a, double));
+					break;
+				}
+			case 's':
+				{
+					c = va_arg(a, char *);
+					if (c == NULL)
+						c = "(nil)";
+					printf("%s", c);
+					break;
+				}
+			default:
+				{
+					i++;
+					continue;
+				}
 		}
-		default:
-		{
-			i++;
-			continue;
-		}
+		if (format[i + 1] != '\0')
+			printf(", ");
+		i++;
 	}
-	if (format[i + 1] != '\0')
-		printf(", ");
-	i++;
-}
+	va_end(a);
 }
 
