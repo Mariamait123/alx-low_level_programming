@@ -14,11 +14,6 @@ void print_all(const char * const format, ...)
 	int i = 0;
 	char *c = "";
 
-	if (format == NULL)
-	{
-		printf(" ");
-		return;
-	}
 	va_start(a, format);
 	print(i, c, format, a);
 	printf("\n");
