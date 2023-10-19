@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include "lists.h"
+#include <stdlib.h>
+#include <string.h>
 /**
   *print_list - prints input array
   *@h: input list
