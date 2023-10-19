@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
-int slen(char *s);
+int slen(const char *s);
 /**
   *add_node -  adds a new node at the beginning of a list_t
   *@head: input list_t
@@ -12,7 +12,7 @@ int slen(char *s);
   */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t add;
+	list_t *add;
 
 	add = malloc(sizeof(list_t));
 	if (add == NULL)
@@ -28,7 +28,7 @@ list_t *add_node(list_t **head, const char *str)
   *@s: input string
   *Return: number of char
   */
-int slen(char *s)
+int slen(const char *s)
 {
 	int i;
 
